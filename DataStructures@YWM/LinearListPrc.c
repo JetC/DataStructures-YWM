@@ -14,10 +14,11 @@ SqList setupLinearListUsingFile(FILE *fin)
     initList_Sq(&list);
     while (!feof(fin)) {
 
-        int i = 1;
+        static int i = 1;
         int temp;
         fscanf (fin, "%d", &temp);
-        modifyElementInList(&list, i, temp);
+        //此处不能直接modify,因为此时表长length为0,不包含元素
+        insertIntoList(&list, i, temp);
         i++;
     }
     return list;

@@ -7,12 +7,12 @@
 //
 
 #include <stdio.h>
-#include "LinearListPrc.h"
+#include "LinearListTest.h"
 
 int main(int argc, const char * argv[]) {
 
-    FILE *fin = fopen("/Users/sunpeifeng/Desktop/SourceTree/DataStructures@YWM/DataStructures@YWM/SqListSource", "r");
-    setupLinearListUsingFile(fin);
+    testInsertDelete();
+
     return 0;
 }
 

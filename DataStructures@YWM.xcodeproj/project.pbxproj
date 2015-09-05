@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DFAA58FA1B9ADDDF000AFE21 /* LinearListPrc.c in Sources */ = {isa = PBXBuildFile; fileRef = DFAA58F81B9ADDDF000AFE21 /* LinearListPrc.c */; };
+		DFAA59001B9AEE22000AFE21 /* LinearListTest.c in Sources */ = {isa = PBXBuildFile; fileRef = DFAA58FE1B9AEE22000AFE21 /* LinearListTest.c */; };
 		DFD5798F1B9A86CC00E65640 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DFD5798E1B9A86CC00E65640 /* main.c */; };
 		DFD579971B9A893400E65640 /* LinearList_SequenceStorage.c in Sources */ = {isa = PBXBuildFile; fileRef = DFD579951B9A893400E65640 /* LinearList_SequenceStorage.c */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,8 @@
 		DFAA58F81B9ADDDF000AFE21 /* LinearListPrc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinearListPrc.c; sourceTree = "<group>"; };
 		DFAA58F91B9ADDDF000AFE21 /* LinearListPrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearListPrc.h; sourceTree = "<group>"; };
 		DFAA58FC1B9AE315000AFE21 /* SqListSource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SqListSource; sourceTree = "<group>"; };
+		DFAA58FE1B9AEE22000AFE21 /* LinearListTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinearListTest.c; sourceTree = "<group>"; };
+		DFAA58FF1B9AEE22000AFE21 /* LinearListTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearListTest.h; sourceTree = "<group>"; };
 		DFD5798B1B9A86CC00E65640 /* DataStructures@YWM */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DataStructures@YWM"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD5798E1B9A86CC00E65640 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		DFD579951B9A893400E65640 /* LinearList_SequenceStorage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinearList_SequenceStorage.c; sourceTree = "<group>"; };
@@ -51,8 +54,7 @@
 			children = (
 				DFD579961B9A893400E65640 /* LinearList_SequenceStorage.h */,
 				DFD579951B9A893400E65640 /* LinearList_SequenceStorage.c */,
-				DFAA58F81B9ADDDF000AFE21 /* LinearListPrc.c */,
-				DFAA58F91B9ADDDF000AFE21 /* LinearListPrc.h */,
+				DFAA58FD1B9AEDD0000AFE21 /* Prc&Test */,
 			);
 			name = LinearList;
 			sourceTree = "<group>";
@@ -63,6 +65,17 @@
 				DFAA58FC1B9AE315000AFE21 /* SqListSource */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		DFAA58FD1B9AEDD0000AFE21 /* Prc&Test */ = {
+			isa = PBXGroup;
+			children = (
+				DFAA58F91B9ADDDF000AFE21 /* LinearListPrc.h */,
+				DFAA58F81B9ADDDF000AFE21 /* LinearListPrc.c */,
+				DFAA58FF1B9AEE22000AFE21 /* LinearListTest.h */,
+				DFAA58FE1B9AEE22000AFE21 /* LinearListTest.c */,
+			);
+			name = "Prc&Test";
 			sourceTree = "<group>";
 		};
 		DFD579821B9A86CC00E65640 = {
@@ -148,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFAA59001B9AEE22000AFE21 /* LinearListTest.c in Sources */,
 				DFAA58FA1B9ADDDF000AFE21 /* LinearListPrc.c in Sources */,
 				DFD5798F1B9A86CC00E65640 /* main.c in Sources */,
 				DFD579971B9A893400E65640 /* LinearList_SequenceStorage.c in Sources */,

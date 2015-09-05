@@ -36,7 +36,8 @@ Status initList_Sq(SqList *l){
  */
 Status insertIntoList(SqList *l, int i, ElemType e){
 
-    if (i<0 || i>l->length) {
+    //注意这里是i>length+1 !
+    if (i<0 || i>l->length+1) {
         return ERROR;
     }
     if (l->length >= l->listSize) {
@@ -74,7 +75,7 @@ Status insertIntoList(SqList *l, int i, ElemType e){
  *
  *    @return <#return value description#>
  */
-Status deleteFromList(SqList *l, int i, ElemType e){
+Status deleteFromList(SqList *l, int i, ElemType *e){
 
     if(i<1 || i>l->length)
     {
@@ -82,19 +83,36 @@ Status deleteFromList(SqList *l, int i, ElemType e){
         return ERROR;
     }
 
-    //q为被删除元素的位置,在i-1处
+    //q为被删除元素的位置,在下标i-1处
     ElemType *q = &(l->elem[i-1]);
-    e = *q;
+    *e = *q;
     //p为指向末尾的指针
-    ElemType *p = &l->elem[LIST_INIT_SIZE];
+    ElemType *p = &l->elem[l->length-1];
 
-    for (q++; q<p; q++) {
+    for (; q<p; q++) {
         *q = *(q+1);
     }
 
     --l->length;
     return OK;
 }
+
+/**
+ *    自用:遍历表
+ *
+ *    @param l <#l description#>
+ *
+ *    @return <#return value description#>
+ */
+int* traverseList(SqList l){
+    int *traversedResultChars;
+    traversedResultChars = malloc(sizeof(l.elem)*l.length);
+    for (int i = 0; i<l.length; i++) {
+        *(traversedResultChars+i) = l.elem[i];
+    }
+    return traversedResultChars;
+}
+
 
 /**
  *    自用:修改表l中的第i个元素的值为e

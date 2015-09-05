@@ -24,7 +24,8 @@ typedef struct {
 
 Status initList_Sq(SqList *l);
 Status insertIntoList(SqList *l, int i, ElemType e);
-Status deleteFromList(SqList *l, int i, ElemType e);
+Status deleteFromList(SqList *l, int i, ElemType *e);
+int* traverseList(SqList l);
 int modifyElementInList(SqList *l, int i, ElemType e);
 
 
