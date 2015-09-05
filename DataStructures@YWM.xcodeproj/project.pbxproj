@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DFD5798F1B9A86CC00E65640 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DFD5798E1B9A86CC00E65640 /* main.c */; };
+		DFD579971B9A893400E65640 /* LinearList_SequenceStorage.c in Sources */ = {isa = PBXBuildFile; fileRef = DFD579951B9A893400E65640 /* LinearList_SequenceStorage.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DF018F6A1B9AB52400858E0A /* PublicDeclarations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicDeclarations.h; sourceTree = "<group>"; };
+		DF8A21E21B9AD8D000693B14 /* LinearListPrc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearListPrc.h; sourceTree = "<group>"; };
 		DFD5798B1B9A86CC00E65640 /* DataStructures@YWM */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DataStructures@YWM"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD5798E1B9A86CC00E65640 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		DFD579951B9A893400E65640 /* LinearList_SequenceStorage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinearList_SequenceStorage.c; sourceTree = "<group>"; };
+		DFD579961B9A893400E65640 /* LinearList_SequenceStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearList_SequenceStorage.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF8A21E31B9AD8DB00693B14 /* LinearList */ = {
+			isa = PBXGroup;
+			children = (
+				DFD579961B9A893400E65640 /* LinearList_SequenceStorage.h */,
+				DFD579951B9A893400E65640 /* LinearList_SequenceStorage.c */,
+				DF8A21E21B9AD8D000693B14 /* LinearListPrc.h */,
+			);
+			name = LinearList;
+			sourceTree = "<group>";
+		};
 		DFD579821B9A86CC00E65640 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				DFD5798E1B9A86CC00E65640 /* main.c */,
+				DF8A21E31B9AD8DB00693B14 /* LinearList */,
+				DF018F6A1B9AB52400858E0A /* PublicDeclarations.h */,
 			);
 			path = "DataStructures@YWM";
 			sourceTree = "<group>";
@@ -119,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD5798F1B9A86CC00E65640 /* main.c in Sources */,
+				DFD579971B9A893400E65640 /* LinearList_SequenceStorage.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +223,7 @@
 		DFD579931B9A86CC00E65640 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = ansi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +231,7 @@
 		DFD579941B9A86CC00E65640 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = ansi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -235,6 +255,7 @@
 				DFD579941B9A86CC00E65640 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
