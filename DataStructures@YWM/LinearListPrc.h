@@ -6,13 +6,14 @@
 //  Copyright (c) 2015 孙培峰. All rights reserved.
 //
 
-#ifndef DataStructures_YWM_LinearListPrc_h
-#define DataStructures_YWM_LinearListPrc_h
+#ifndef __DataStructures_YWM__LinearListPrc__
+#define __DataStructures_YWM__LinearListPrc__
 
+#include <stdio.h>
 #include "PublicDeclarations.h"
 #include "LinearList_SequenceStorage.h"
 
-Status setupLinearListUsingFile()
+SqList setupLinearListUsingFile(FILE *fin);
 
 
-#endif
+#endif /* defined(__DataStructures_YWM__LinearListPrc__) */
