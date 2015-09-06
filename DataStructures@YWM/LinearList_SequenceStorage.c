@@ -104,12 +104,15 @@ Status deleteFromList(SqList *l, int i, ElemType *e){
  *
  *    @return <#return value description#>
  */
-int* traverseList(SqList l){
-    int *traversedResultChars;
+ElemType* traverseList(SqList l){
+    ElemType *traversedResultChars;
     traversedResultChars = malloc(sizeof(l.elem)*l.length);
-    for (int i = 0; i<l.length; i++) {
+    int i = 0;
+    for (; i<l.length; i++) {
         *(traversedResultChars+i) = l.elem[i];
     }
+    l.elem[i] = -1;
+
     return traversedResultChars;
 }
 

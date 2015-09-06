@@ -1,4 +1,4 @@
-//
+    //
 //  LinearListTest.c
 //  DataStructures@YWM
 //
@@ -12,19 +12,31 @@
 int testInsertDelete()
 {
     FILE *fin = fopen("/Users/sunpeifeng/Desktop/SourceTree/DataStructures@YWM/DataStructures@YWM/SqListSource", "r");
-
     SqList sqlist = setupLinearListUsingFile(fin);
     int e = 9999;
     deleteFromList(&sqlist, 1, &e);
-    int *a = traverseList(sqlist);
-    *a = 0;
+    ElemType *a = traverseList(sqlist);
+    printf("%d",*a);
+//        fclose(fin);
+
+    rewind(fin);
+    compareListWithGivenResultFile(sqlist, fin);
     return OK;
 }
 
-//int compareListWithGivenResultFile(SqList list, FILE *resultFin)
-//{
-//
-//}
+int compareListWithGivenResultFile(SqList listToTest, FILE *resultFin)
+{
+    SqList list = setupLinearListUsingFile(resultFin);
+    ElemType *resultArr = traverseList(list);
+    ElemType *listToTestArr = traverseList(listToTest);
+    *resultArr = 0;
+    *listToTestArr = 0;
+    return OK;
+}
+
+int compareListWithList(SqList list1, SqList list2){
+    return OK;
+}
 
 
 

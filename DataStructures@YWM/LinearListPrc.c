@@ -12,9 +12,12 @@ SqList setupLinearListUsingFile(FILE *fin)
 {
     SqList list;
     initList_Sq(&list);
+    if (feof(fin)) {
+        rewind(fin);
+    }
+    int i = 1;
     while (!feof(fin)) {
 
-        static int i = 1;
         int temp;
         fscanf (fin, "%d", &temp);
         //此处不能直接modify,因为此时表长length为0,不包含元素
